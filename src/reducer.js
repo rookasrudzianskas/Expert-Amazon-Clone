@@ -30,3 +30,7 @@ function reducer(state, action) {
             return state;
     }
 }
+
+// This lets us to use the reducer outside, anywhere in the app, meaning I can use the function reducer, with all the logics inside, anywhere in the app
+// in any component, does not mean, if it in the top, or it is in the bottom, anywhere
+export default reducer;

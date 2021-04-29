@@ -4,14 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {StateProvider} from "./components/StateProvider";
-import {initialState} from "./reducer";
-
+import reducer, {initialState} from "./reducer";
 // state provider is like the object, where you can access it from anywhere in the app, you can get any data from it, anywhere in the app
 
 ReactDOM.render(
   <React.StrictMode>
       {/* state provider injects props to the children, this means to the app, and lower components */}
-      <StateProvider initialState={initialState} reducer={}>
+      {/* reducer means, we go and use the reducer function with all the methods inside like ADD_TO_BASKET, REMOVE_FROM_BASKET*/}
+      {/* if any of these two cases is not met, so we are going to use the default one, which is going to just return state*/}
+      {/* return the state, which is the same as it went to the reducer and the start, nothing have been changed */}
+      <StateProvider initialState={initialState} reducer={reducer}>
           <App />
       </StateProvider>
   </React.StrictMode>,
