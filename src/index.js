@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {StateProvider} from "./components/StateProvider";
+import {initialState} from "./reducer";
+
+// state provider is like the object, where you can access it from anywhere in the app, you can get any data from it, anywhere in the app
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      {/* state provider injects props to the children, this means to the app, and lower components */}
+      <StateProvider initialState={initialState} reducer={}>
+          <App />
+      </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
