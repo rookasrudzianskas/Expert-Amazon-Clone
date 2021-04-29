@@ -8,6 +8,15 @@ const CheckoutProduct = ({ id, title, image, price, rating }) => {
 
     const removeFromBasket = () => {
         // remove item from the basket
+        // so we use the dispatch, to shoot the action to the data layer,
+        // it has the type REMOVE_FROM_BASKET so uses the case in the reducer, to remove from the basket, and passes just id,
+        // because we use it, to select the exact product to remove
+        dispatch({
+            // the reducer action type, so in this case, we use the delete one
+            type: "REMOVE_FROM_BASKET",
+            // the id, because we have to know that item it to delete it, the exact item! The id has to be unique value
+            id: id,
+        });
     }
 
 
