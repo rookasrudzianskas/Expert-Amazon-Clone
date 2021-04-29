@@ -8,9 +8,10 @@
 // We need this to track the basket things
 
 
-import {createContext, useReducer, useContext} from "react";
+import React, {createContext, useReducer, useContext} from "react";
 
 // this is the data layer
+// initialized data layer
 export const StateContext = createContext();
 
 // BUILDING THE PROVIDER, to make the access to this data for all the components
@@ -26,5 +27,5 @@ export const StateProvider = ({ reducer, initialState, children}) => (
 );
 
 // THis is is how we use the reducer in the inside of the any component of the app. DOes not matter where, it is accessible anywhere
-// I just need useStateValue to use it in the differnt components, just it.
+// I just need useStateValue to use it in the different components, just it.
 export const useStateValue = () => useContext(StateContext);

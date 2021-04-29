@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {StateProvider} from "./components/StateProvider";
+import {StateProvider} from "./StateProvider";
 import reducer, {initialState} from "./reducer";
+
 // state provider is like the object, where you can access it from anywhere in the app, you can get any data from it, anywhere in the app
 
 ReactDOM.render(

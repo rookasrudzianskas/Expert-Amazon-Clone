@@ -3,11 +3,11 @@ import "./styles/Header.css"
 import {Link} from "react-router-dom";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import {useStateValue} from "./StateProvider";
+import {useStateValue} from "../StateProvider";
 
-const Header = () => {
+function Header() {
     // I access the data layer from StateProvider js, by accessing the basket object with hook - useStateValue
-    // it destructures to the state, and the method dispatch
+    // it destructures to the state, asnd the method dispatch
     // the state is current state of the data layer, what actually is in it now, if I desctructure it I get {basket=[]}
     // dispatch is like a gun, then I want to add something on data layer, or to change it, I shoot to it and the data changes or something adds
     // the things I shoot, is the actions
@@ -85,7 +85,7 @@ const Header = () => {
                     {/*     everything is stored in the data layer state, and once I add, the datalayer updates */}
                     {/*     and all the items which value has changed decreased or increased, just updates in the all components */}
                     {/*    which are using that data*/}
-                        <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
+                        <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
                     </div>
                 </Link>
 
