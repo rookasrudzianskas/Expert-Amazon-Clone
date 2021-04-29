@@ -1,7 +1,16 @@
 import React from "react";
 import "./styles/CheckoutProduct.css";
+import {useStateValue} from "../StateProvider";
 
 const CheckoutProduct = ({ id, title, image, price, rating }) => {
+    // we need to access the store, so we use this: 🙌
+    const [{basket}, dispatch] = useStateValue();
+
+    const removeFromBasket = () => {
+        // remove item from the basket
+    }
+
+
     return (
         <div className="checkoutProduct">
             {/* image    */}
@@ -42,7 +51,7 @@ const CheckoutProduct = ({ id, title, image, price, rating }) => {
                 {/* we are using the item it, to go the store and find it and delete it using the action which type is */}
                 {/* REMOVE_FROM_BASKET  */}
 
-                <button>Remove from basket</button>
+                <button onClick={removeFromBasket}>Remove from basket</button>
 
             </div>
 
