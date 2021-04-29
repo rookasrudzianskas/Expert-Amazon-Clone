@@ -2,7 +2,6 @@ import React from "react";
 import {useStateValue} from "../StateProvider";
 import "./styles/Checkout.css";
 import CheckoutProduct from "./CheckourProduct";
-import {logDOM} from "@testing-library/react";
 import Subtotal from "./Subtotal";
 
 const Checkout = () => {

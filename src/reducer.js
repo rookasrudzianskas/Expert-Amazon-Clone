@@ -2,7 +2,8 @@
 // we make the initial state object, and export it, to be able to use anywhere in the app
 // this is how the store lookks then the app loads, and nothing has changed, whole clean store
 // import Product from "./components/Product";
-// import React from "react";
+// eslint-disable-next-line no-unused-vars
+import React from "react";
 
 export const initialState = {
     basket: [{
@@ -13,6 +14,11 @@ export const initialState = {
         rating: 5,
     }],
 };
+
+// all it does, it takes the basket and returns the total price
+// the reduce increments all the prices inside of the basket by the needed amount, and starts doing that from 0
+export const getBasketTotal = (basket) =>
+    basket?.reduce((amount, item) => item.price + amount, 0);
 
 // everything in the state provider is like the state and the action is like the action ie to remove an item from the basket
 // for state it could be like ie function reducer(state, action)
