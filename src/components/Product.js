@@ -11,12 +11,19 @@ const Product = ({ id, title, image, price, rating }) => {
             </p>
 
             <div className="product__rating">
+                {/*stars rating, means ,you create an array, of how many stars are in the product, you fill it with empty values, and map*/}
+                {/* map per each item, it is not important what values, but just run the rating times, and put the start each time*/}
+
                 {
                     Array(rating).fill().map((_) => (
                         <p>⭐</p>
                     ))
                 }
+            {/*    end of stars */}
             </div>
+            {/* the description image */}
+            <img src={image} alt=""/>
+            <button>Add to basket</button>
         </div>
     );
 }
