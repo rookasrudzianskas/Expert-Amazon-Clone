@@ -31,7 +31,6 @@ const Checkout = () => {
                         // we pass the props to form the each product you have in the basket
 
                         <CheckoutProduct
-
                             id={item.id}
                             title={item.title}
                             image={item.image}
