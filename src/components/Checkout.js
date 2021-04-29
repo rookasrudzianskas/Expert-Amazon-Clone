@@ -11,6 +11,7 @@ const Checkout = () => {
 
     return (
         <div className="checkout">
+            <div className="checkout__left">
             <img className="checkout__ad" src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt=""/>
             {/* we check if the basket, in the State Provide length is 0, so your basket is empty*/}
             {/*if not, so we show that there is items, and render each one with map function per each item*/}
@@ -42,6 +43,7 @@ const Checkout = () => {
 
                 </div>
                 )}
+            </div>
         </div>
     );
 }
