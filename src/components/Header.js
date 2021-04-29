@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Header.css"
 import {Link} from "react-router-dom";
+import SearchIcon from '@material-ui/icons/Search';
 
 const Header = () => {
     return (
@@ -8,12 +9,15 @@ const Header = () => {
 
             {/*   Logo on the left -> img   */}
 
-            <Link>
-                <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" to="/" className="header__logo" alt=""/>
+            <Link to="/" >
+                <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" className="header__logo" alt=""/>
             </Link>
 
 
         {/*    search box   */}
+
+            <input type="text" className="header__searchInput" />
+            <SearchIcon className="header__searchIcon" />
         {/*    3 links  */}
         {/*    Basket icon with the number   */}
 
