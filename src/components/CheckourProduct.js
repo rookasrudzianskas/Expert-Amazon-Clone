@@ -34,6 +34,14 @@ const CheckoutProduct = ({ id, title, image, price, rating }) => {
 
             {/*     the button to remove from the basket, also goes per reducer action, with typer REMOVE_FROM_BASKET */}
 
+                {/* removing from the basket using reducer */}
+                {/* once I click remove from the basket , it takes the id from the item, which you clicked  */}
+                {/* and tries to find it in the basket array, the data layer state */}
+                {/* and then remove the item from the baskte */}
+
+                {/* we are using the item it, to go the store and find it and delete it using the action which type is */}
+                {/* REMOVE_FROM_BASKET  */}
+
                 <button>Remove from basket</button>
 
             </div>
