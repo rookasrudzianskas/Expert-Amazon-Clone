@@ -19,7 +19,16 @@ const Checkout = () => {
                 </div>
             ) : (
                 <div>
-                    <h2>Your Shopping Basket</h2>
+                    <h2 className="checkout__title">Your Shopping Basket</h2>
+
+                {/*    list out all the checkout products*/}
+                {/*    go per every item in the basket and list it in this component */}
+                    {basket.map(item => (
+
+                        <CheckoutProduct />
+
+                    ))}
+
                 </div>
                 )}
         </div>
