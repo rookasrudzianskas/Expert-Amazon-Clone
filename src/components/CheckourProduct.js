@@ -13,7 +13,7 @@ const CheckoutProduct = ({ id, title, image, price, rating }) => {
             {/* the information about the product except the image  */}
 
             <div className="checkoutProduct__info">
-                <p className="checkoutProduct_title">{title}</p>
+                <p className="checkoutProduct__title">{title}</p>
 
                 <p className="checkoutProduct__price">
                     <small>$</small>
