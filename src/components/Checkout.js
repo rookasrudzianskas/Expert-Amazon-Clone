@@ -3,6 +3,7 @@ import {useStateValue} from "../StateProvider";
 import "./styles/Checkout.css";
 import CheckoutProduct from "./CheckourProduct";
 import {logDOM} from "@testing-library/react";
+import Subtotal from "./Subtotal";
 
 const Checkout = () => {
     // we are going to need basket to count the amount to pay
@@ -52,7 +53,10 @@ const Checkout = () => {
             {/* the function to show the money and the button */}
             {
                 basket.length > 0 && (
-                //     todo
+                // the right section is going to appear
+                    <div className="checkout__right">
+                        <Subtotal />
+                    </div>
                 )
             }
         </div>
