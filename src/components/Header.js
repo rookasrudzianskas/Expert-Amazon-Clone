@@ -1,13 +1,22 @@
 import React from "react";
 import "./styles/Header.css"
+import {Link} from "react-router-dom";
+
 const Header = () => {
     return (
         <nav className="header">
-            <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" className="header__logo" alt=""/>
-        {/*   Logo on the left -> img   */}
+
+            {/*   Logo on the left -> img   */}
+
+            <Link>
+                <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" to="/" className="header__logo" alt=""/>
+            </Link>
+
+
         {/*    search box   */}
         {/*    3 links  */}
-        {/*    Baset icon with the number   */}
+        {/*    Basket icon with the number   */}
+
         </nav>
     )
 }
