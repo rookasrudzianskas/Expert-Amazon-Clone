@@ -31,7 +31,13 @@ const CheckoutProduct = ({ id, title, image, price, rating }) => {
 
             {/*    the end of start showing div */}
 
+            {/*     the button to remove from the basket, also goes per reducer action, with typer REMOVE_FROM_BASKET */}
+
+                <button>Remove from basket</button>
+
             </div>
+
+
         </div>
     )
 }

@@ -1,8 +1,17 @@
 
 // we make the initial state object, and export it, to be able to use anywhere in the app
 // this is how the store lookks then the app loads, and nothing has changed, whole clean store
+import Product from "./components/Product";
+import React from "react";
+
 export const initialState = {
-    basket: [],
+    basket: [{
+        id: "123123",
+        title: 'The lean Startup, How Constant Innovation Creates Radically Successful Business Paperback',
+        price: 29.99,
+        image: "https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg",
+        rating: 5,
+    }],
 };
 
 // everything in the state provider is like the state and the action is like the action ie to remove an item from the basket
