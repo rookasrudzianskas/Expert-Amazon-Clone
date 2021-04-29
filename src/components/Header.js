@@ -16,7 +16,7 @@ function Header() {
     // at this point, I do not need to do any manipulation, just get the current state, meaning, how many items are in the basket
     const [{ basket }] = useStateValue();
 
-
+    console.log('🛍️', basket)
 
     return (
         <nav className="header">

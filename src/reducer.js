@@ -15,7 +15,16 @@ const reducer = (state, action)  => {
         // this case shows what the action is, for example it is like an action name and so on
         case 'ADD_TO_BASKET':
             // Logic for adding item to the basket
-            return { state }
+            // in this case we just return the same state as it arrived to the reducer action
+            return {
+                // I return the current state, as it is in the ...state
+                ...state,
+                // but I change the basket which is in the initial state basket: [], I get the previous basket and add to it the action item from
+                // product.js, which was called by pressing the button add to card. Basically this is it, I call the addtocard in product.js,
+                // shoot the action with payload to the data layer, which updates it is state, byy using the reducer, case ADD_TO_BASKET
+                // and returns the new state, means the basket
+              basket:  [...state.basket, action.item],
+            };
 
         // the action number two
         case 'REMOVE_FROM_BASKET':
