@@ -15,9 +15,10 @@ const Header = () => {
 
 
         {/*    search box   */}
-
-            <input type="text" className="header__searchInput" />
-            <SearchIcon className="header__searchIcon" />
+            <div className="header__search">
+                <input type="text" className="header__searchInput" />
+                <SearchIcon className="header__searchIcon" />
+            </div>
         {/*    3 links  */}
         {/*    Basket icon with the number   */}
 
