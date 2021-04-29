@@ -39,7 +39,7 @@ const reducer = (state, action)  => {
         case 'REMOVE_FROM_BASKET':
             // Logic for removing item from the basket
 
-            return { state }
+            return { ...state }
 
 
         // this is the default one, so it is going to excecute if the ADD_TO_BASKET or REMOVE_FROM_BASKET, does not execute

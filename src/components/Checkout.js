@@ -2,6 +2,7 @@ import React from "react";
 import {useStateValue} from "../StateProvider";
 import "./styles/Checkout.css";
 import CheckoutProduct from "./CheckourProduct";
+import {logDOM} from "@testing-library/react";
 
 const Checkout = () => {
     // we are going to need basket to count the amount to pay
@@ -26,9 +27,11 @@ const Checkout = () => {
 
                 {/*    list out all the checkout products*/}
                 {/*    go per every item in the basket and list it in this component */}
-                    {basket.map(item => (
+                    {basket?.map((item) => (
                         // we pass the props to form the each product you have in the basket
+
                         <CheckoutProduct
+
                             id={item.id}
                             title={item.title}
                             image={item.image}
@@ -41,7 +44,7 @@ const Checkout = () => {
                 </div>
                 )}
         </div>
-    )
+    );
 }
 
 export default Checkout;
