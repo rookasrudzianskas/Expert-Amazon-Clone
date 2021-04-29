@@ -6,9 +6,26 @@
 
 .header__logo {
     width: 100px;
+    object-fit: contain;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 18px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header__link {
+    color: white;
+    text-decoration: none;
 }
 
 .header__search {
