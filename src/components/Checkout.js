@@ -11,6 +11,8 @@ const Checkout = () => {
 
     return (
         <div className="checkout">
+            {/* the left side is everything what goes to the left, including the ad, items in the basket, and on the other side*/}
+            {/* will be the subtotal to count money*/}
             <div className="checkout__left">
             <img className="checkout__ad" src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" alt=""/>
             {/* we check if the basket, in the State Provide length is 0, so your basket is empty*/}
@@ -44,6 +46,15 @@ const Checkout = () => {
                 </div>
                 )}
             </div>
+        {/*     the end of the left side */}
+
+            {/* the start of the right side */}
+            {/* the function to show the money and the button */}
+            {
+                basket.length > 0 && (
+                //     todo
+                )
+            }
         </div>
     );
 }
