@@ -39,6 +39,7 @@ const reducer = (state, action)  => {
         case 'REMOVE_FROM_BASKET':
             // Logic for removing item from the basket
             // we copy our current basket state, to the new variable, just copy&paste
+            // cloned basket
             let newBasket = [...state.basket];
             // we go per all basket items, with findindex method, we check them all
             // basically the basketItem is the each item, we go every time, and compare it is id, to the id, which arrived to the reducer, passed
@@ -64,6 +65,7 @@ const reducer = (state, action)  => {
             // after the delete operation, we return the basket, with the previrous state, and the new basket attached, which has updated
             // values, because we deleted something from it
             // basket must be new basket, because there is an update in it
+            // basically return everything what is in the state, but change the basket, to be the new basket, without deleted items
             return { ...state, basket: newBasket}
 
 
