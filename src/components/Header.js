@@ -80,7 +80,7 @@ const Header = () => {
         {/*    end of 3 links   */}
 
         </nav>
-    )
+    );
 }
 
 export default Header;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/Home.css";
+import Product from "./Product";
 
 const Home = () => {
     return (
@@ -11,8 +12,20 @@ const Home = () => {
 
             {/* end of amazon banner   */}
 
+        {/*    Products  id, title, price, rating, image    */}
+
+            {/* Product */}
+
+            <Product id="123123" title='The lean startup' price={29.99}
+                     image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
+                     rating={5}/>
+
+            {/* Product */}
+
+
+        {/*    end of products  */}
         </div>
-    )
+    );
 }
 
 export default Home;
