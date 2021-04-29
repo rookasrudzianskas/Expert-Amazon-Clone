@@ -68,7 +68,11 @@ const Header = () => {
                         <ShoppingBasketIcon />
 
                     {/*    Number of items in the basket    */}
-                        <span className="header__optionLineTwo header__basketCount">0s</span>
+                    {/*    I have my basket in my data layer, and am I keep adding Items I just see adding one by one. */}
+                    {/*     everything is stored in the data layer state, and once I add, the datalayer updates */}
+                    {/*     and all the items which value has changed decreased or increased, just updates in the all components */}
+                    {/*    which are using that data*/}
+                        <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
                     </div>
                 </Link>
 

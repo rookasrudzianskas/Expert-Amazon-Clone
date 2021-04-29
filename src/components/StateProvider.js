@@ -24,3 +24,6 @@ export const StateProvider = ({ reducer, initialState, children}) => (
         {children}
     </StateContext.Provider>
 );
+
+// THis is is how we use the reducer in the inside of the any component of the app. DOes not matter where, it is accessible anywhere
+export const useStateValue = () => useContext(StateContext);
