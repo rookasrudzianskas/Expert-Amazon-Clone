@@ -15,10 +15,23 @@ const Home = () => {
         {/*    Products  id, title, price, rating, image    */}
 
             {/* Product */}
+            <div className="home__row">
+                <Product id="123123"
+                         title='The lean Startup, How Constant Innovation Creates Radically Successful Business Paperback' price={29.99}
+                         image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
+                         rating={5}/>
 
-            <Product id="123123" title='The lean Startup, How Constant Innovation Creates Radically Successful Business Paperback' price={29.99}
-                     image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
-                     rating={5}/>
+                <Product
+                        id="49538094"
+                        title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+                        price={239.0}
+                        rating={4}
+                        image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+                />
+
+
+
+            </div>
 
             {/* Product */}
 
