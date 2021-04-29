@@ -1,8 +1,8 @@
 
 // we make the initial state object, and export it, to be able to use anywhere in the app
 // this is how the store lookks then the app loads, and nothing has changed, whole clean store
-import Product from "./components/Product";
-import React from "react";
+// import Product from "./components/Product";
+// import React from "react";
 
 export const initialState = {
     basket: [{

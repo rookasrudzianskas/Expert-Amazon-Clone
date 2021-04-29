@@ -1,11 +1,12 @@
 import React from "react";
+import "./styles/CheckoutProduct.css";
 
 const CheckoutProduct = ({ id, title, image, price, rating }) => {
     return (
         <div className="checkoutProduct">
             {/* image    */}
 
-            <img src={image} alt=""/>
+            <img className="checkoutProduct__image" src={image} alt=""/>
 
             {/* the end of the image and the start of the product description   */}
 
