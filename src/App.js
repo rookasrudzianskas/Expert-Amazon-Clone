@@ -1,18 +1,38 @@
 import './App.css';
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 function App() {
   return (
-    <div className="app">
-        {/* start */}
-        <h1>Hello world 🚀</h1>
+      <Router>
+        <div className="app">
 
-    {/*    local amazon.com     */}
-    {/*    localhost.com/checkout   */}
-    {/*    localhost.com/login   */}
+            <Switch>
+                <Route path="/checkout" >
+                    <h1>Check out</h1>
+                </Route>
 
-    </div>
+                <Route path="/login" >
+                    <h1>Login page</h1>
+                </Route>
+
+                {/* Home url, if all above broken */}
+
+                <Route path="/" >
+                    <h1>Home page component</h1>
+                </Route>
+
+            </Switch>
+
+
+
+        {/*    local amazon.com     */}
+        {/*    localhost.com/checkout   */}
+        {/*    localhost.com/login   */}
+
+        </div>
+      </Router>
   );
 }
 
