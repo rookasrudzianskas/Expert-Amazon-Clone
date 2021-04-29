@@ -38,8 +38,33 @@ const reducer = (state, action)  => {
         // the action number two
         case 'REMOVE_FROM_BASKET':
             // Logic for removing item from the basket
+            // we copy our current basket state, to the new variable, just copy&paste
+            let newBasket = [...state.basket];
+            // we go per all basket items, with findindex method, we check them all
+            // basically the basketItem is the each item, we go every time, and compare it is id, to the id, which arrived to the reducer, passed
+            // from removeFromBasket from checkoutproduct dispatch action
+            // if it is found, it is going to return 1 if not -1
+            //
+            const index = state.basket.findIndex((basketItem) => basketItem.id === action.id)
+            // if the succesful response, and it found the item, so this means, the it is going to remove it from the basket in the data layer
+            // -1 is not found, all other numbers from 0 and ++ are counted as true
 
-            return { ...state }
+            if( index >= 0) {
+                // item exists in the basket, remove it..
+                // we go to the copy of the basket, we got an idex, for exmample the 1, and then we just cut it with splice
+                // just it, and nothing more
+                // chopped off one item by index
+                newBasket.splice(index, 1);
+
+            } else {
+                // just the red console log if there is no item
+                console.warn(`Cant remove product (id: ${action.id}) as its not in the basket`);
+            }
+
+            // after the delete operation, we return the basket, with the previrous state, and the new basket attached, which has updated
+            // values, because we deleted something from it
+            // basket must be new basket, because there is an update in it
+            return { ...state, basket: newBasket}
 
 
         // this is the default one, so it is going to excecute if the ADD_TO_BASKET or REMOVE_FROM_BASKET, does not execute
