@@ -68,7 +68,7 @@ const Header = () => {
                         <ShoppingBasketIcon />
 
                     {/*    Number of items in the basket    */}
-                        <span>0s</span>
+                        <span className="header__optionLineTwo header__basketCount">0s</span>
                     </div>
                 </Link>
 
