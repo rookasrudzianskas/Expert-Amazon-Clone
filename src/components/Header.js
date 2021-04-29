@@ -3,8 +3,21 @@ import "./styles/Header.css"
 import {Link} from "react-router-dom";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import {useStateValue} from "./StateProvider";
 
 const Header = () => {
+    // I access the data layer from StateProvider js, by accessing the basket object with hook - useStateValue
+    // it destructures to the state, and the method dispatch
+    // the state is current state of the data layer, what actually is in it now, if I desctructure it I get {basket=[]}
+    // dispatch is like a gun, then I want to add something on data layer, or to change it, I shoot to it and the data changes or something adds
+    // the things I shoot, is the actions
+    // I can shoot it to the basket, and then straight from the basket, in any way
+    // other way to think, I am appending the data and removing data from the state in the data layer
+    // at this point, I do not need to do any manipulation, just get the current state, meaning, how many items are in the basket
+    const [{ basket }] = useStateValue();
+
+
+
     return (
         <nav className="header">
 

@@ -2,7 +2,7 @@
 // we make the initial state object, and export it, to be able to use anywhere in the app
 // this is how the store lookks then the app loads, and nothing has changed, whole clean store
 export const initialState = {
-    basket: [],
+    basket: ['Bread', 'Chicken', "Games"],
 };
 
 // everything in the state provider is like the state and the action is like the action ie to remove an item from the basket
