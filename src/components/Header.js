@@ -79,8 +79,6 @@ const Header = () => {
 
         {/*    end of 3 links   */}
 
-        {/*    Basket icon with the number   */}
-
         </nav>
     )
 }
