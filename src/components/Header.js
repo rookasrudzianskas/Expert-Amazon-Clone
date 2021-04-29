@@ -2,6 +2,7 @@ import React from "react";
 import "./styles/Header.css"
 import {Link} from "react-router-dom";
 import SearchIcon from '@material-ui/icons/Search';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 const Header = () => {
     return (
@@ -28,8 +29,8 @@ const Header = () => {
 
                 <Link to="/login" className="header__link">
                     <div className="header__option">
-                        <span>Hello, Rokas</span>
-                        <span>Sing In</span>
+                        <span className="header__optionLineOne">Hello, Rokas</span>
+                        <span className="header__optionLineTwo">Sing In</span>
                     </div>
                 </Link>
 
@@ -39,8 +40,8 @@ const Header = () => {
 
                 <Link to="/" className="header__link">
                     <div className="header__option">
-                        <span>Returns</span>
-                        <span>& Orders</span>
+                        <span className="header__optionLineOne">Returns</span>
+                        <span className="header__optionLineTwo">& Orders</span>
                     </div>
                 </Link>
 
@@ -50,14 +51,26 @@ const Header = () => {
 
                 <Link to="/" className="header__link">
                     <div className="header__option">
-                        <span>Your</span>
-                        <span>Prime</span>
+                        <span className="header__optionLineOne">Your</span>
+                        <span className="header__optionLineTwo">Prime</span>
                     </div>
                 </Link>
 
             {/*    end of 3 link */}
 
             {/*     4 link */}
+
+                <Link to="/checkout" className="header__link">
+                    <div className="header__optionBasket">
+
+                    {/*    shopping basket icon */}
+
+                        <ShoppingBasketIcon />
+
+                    {/*    Number of items in the basket    */}
+                        <span>0s</span>
+                    </div>
+                </Link>
 
             {/*     end of 4 link */}
 

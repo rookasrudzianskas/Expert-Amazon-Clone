@@ -20,8 +20,18 @@
 .header__option {
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+.header__optionLineOne {
+    font-size: 10px;
+}
+
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
 
 .header__link {
     color: white;
