@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Home from "./components/Home";
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
 
                 <Route path="/" >
                     <Header />
-                    <h1>Home page component</h1>
+                    <Home />
                 </Route>
 
             </Switch>
