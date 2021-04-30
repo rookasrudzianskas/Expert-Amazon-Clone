@@ -1,4 +1,11 @@
+.login {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+}
+
 .login__logo {
     width: 100px;
     object-fit: contain;
 }
+
