@@ -3,7 +3,7 @@ import "./styles/Product.css";
 import {useStateValue} from "../StateProvider";
 
 function Product({ id, title, image, price, rating }) {
-// we are getting the access to the data layer, and all the actions, to make the addtobasket work
+    // we are getting the access to the data layer, and all the actions, to make the addtobasket work
     // means, then we excecute add to basket by clicking the button, the dispatch will be fired and shoot the action to the reducer which
     // is going to make some logic with it -add or remove from the basket
     const [{}, dispatch] = useStateValue();
