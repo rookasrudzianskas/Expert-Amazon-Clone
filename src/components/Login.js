@@ -2,11 +2,18 @@ import React, {useState} from "react";
 import "./styles/Login.css"
 import {Link} from "@material-ui/core";
 import {auth} from "../firebase";
+import { useHistory} from "react-router-dom";
 
 const Login = () => {
 // to store the email and password data
+    // history to redirect the user after sign up or the login to the differnt page, using history
+    const history = useHistory();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+
+    // we need to have the listener which keeps track of what is going on, if the user is logged in, or not, what is going on
+
+
     // functions to do login and the registering
 
     // Login
@@ -16,7 +23,10 @@ const Login = () => {
         // login logic there
         auth.signInWithEmailAndPassword(email, password)
             .then((auth) => {
+                //we do this, if it is successful, if we are in then mode
             // Logged in successfully, redirect to the homepage
+                // that is it, just that easy, goes to the homepage
+                history.push('/');
         })
             /*
              if accidentally the error occurs, this catch will be fired with the message
@@ -32,6 +42,8 @@ const Login = () => {
         auth.createUserWithEmailAndPassword(email, password)
             .then((auth) => {
                 // created the user and logged in and redirect to the homepage
+                // redirects to the homapge
+                history.push('/');
 
             })
             .catch((e) => alert(e.message));

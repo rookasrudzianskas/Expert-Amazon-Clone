@@ -6,13 +6,8 @@
 import React from "react";
 
 export const initialState = {
-    basket: [{
-        id: "123123",
-        title: 'The lean Startup, How Constant Innovation Creates Radically Successful Business Paperback',
-        price: 29.99,
-        image: "https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg",
-        rating: 5,
-    }],
+    basket: [],
+    user: null,
 };
 
 // all it does, it takes the basket and returns the total price
@@ -28,6 +23,7 @@ const reducer = (state, action)  => {
     // check again bunch of cases, in this case action.type
     switch (action.type) {
         // this case shows what the action is, for example it is like an action name and so on
+
         case 'ADD_TO_BASKET':
             // Logic for adding item to the basket
             // in this case we just return the same state as it arrived to the reducer action
@@ -73,6 +69,22 @@ const reducer = (state, action)  => {
             // basket must be new basket, because there is an update in it
             // basically return everything what is in the state, but change the basket, to be the new basket, without deleted items
             return { ...state, basket: newBasket}
+
+            // the only purpose of this action type is to update the user, that the user is logged in or logged out
+        case "SET_USER":
+            return {
+                ...state,
+                // we return the state, adn set the user, to the action. user, which means, to the value of what the user is right now
+                // is it logged out, logged in, or somehow differently changed
+                // this updates the data layer, and all the components which use the following info gets updated too
+                //✋ this is going to set the user, to whenewher it is now
+                user: action.user
+            }
+
+
+
+
+
 
 
         // this is the default one, so it is going to excecute if the ADD_TO_BASKET or REMOVE_FROM_BASKET, does not execute
