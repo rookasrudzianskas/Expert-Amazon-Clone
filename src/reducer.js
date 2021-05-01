@@ -83,10 +83,6 @@ const reducer = (state, action)  => {
 
 
 
-
-
-
-
         // this is the default one, so it is going to excecute if the ADD_TO_BASKET or REMOVE_FROM_BASKET, does not execute
         // the default one is going to execute and just return the current state, meaning the store
         // this is all, if the default one excecutes, so just leave it is as it is, and that is the end for now
