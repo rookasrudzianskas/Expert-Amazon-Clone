@@ -22,9 +22,9 @@ function Header() {
         // if there is a user, we want to sign it out
         if (user) {
             // sign outs the user
-            auth.signOut()
+            auth.signOut();
         }
-    }
+    };
 
 
     return (
@@ -53,7 +53,7 @@ function Header() {
                     {/* and this login function is going to check out, if the user is logged in */}
                     {/* it is going to leg the user out*/}
                     <div onClick={login} className="header__option">
-                        <span className="header__optionLineOne">Hello, {user.email}</span>
+                        <span className="header__optionLineOne">Hello, {user?.email}</span>
                         <span className="header__optionLineTwo">{user ? 'Sing Out' : 'Sing In'}</span>
                     </div>
                 </Link>
