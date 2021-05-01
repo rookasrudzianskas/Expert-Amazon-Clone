@@ -10,7 +10,7 @@ import {auth} from "./firebase";
 
 function App() {
     // connecting to the data layer
-    const [{basket}, dispatch] = useStateValue();
+    const [{user}, dispatch] = useStateValue();
 
     // a piece of code which runs on a given condition <<<<< POWERFUL
     useEffect(() => {
@@ -44,6 +44,7 @@ function App() {
                 });
             }
         });
+        console.log('🙎‍♂️', user)
 
         return () => {
             // cleanup operations goes there

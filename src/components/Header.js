@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {useStateValue} from "../StateProvider";
+import {auth} from "../firebase";
 
 function Header() {
     // I access the data layer from StateProvider js, by accessing the basket object with hook - useStateValue
@@ -14,9 +15,17 @@ function Header() {
     // I can shoot it to the basket, and then straight from the basket, in any way
     // other way to think, I am appending the data and removing data from the state in the data layer
     // at this point, I do not need to do any manipulation, just get the current state, meaning, how many items are in the basket
-    const [{ basket }] = useStateValue();
+    const [{ basket, user}] = useStateValue();
 
-    console.log('🛍️', basket)
+    // the login function, to check if there is user connected, if not just sign it out from the amazon
+    const login = () => {
+        // if there is a user, we want to sign it out
+        if (user) {
+            // sign outs the user
+            auth.signOut()
+        }
+    }
+
 
     return (
         <nav className="header">
@@ -39,11 +48,13 @@ function Header() {
 
             <div className="header__nav">
             {/*    1 link */}
-
-                <Link to="/login" className="header__link">
-                    <div className="header__option">
-                        <span className="header__optionLineOne">Hello, Rokas</span>
-                        <span className="header__optionLineTwo">Sing In</span>
+            {/* if there is no user logged in, so just then to sign in*/}
+                <Link to={!user && "/login"} className="header__link">
+                    {/* and this login function is going to check out, if the user is logged in */}
+                    {/* it is going to leg the user out*/}
+                    <div onClick={login} className="header__option">
+                        <span className="header__optionLineOne">Hello, {user.email}</span>
+                        <span className="header__optionLineTwo">{user ? 'Sing Out' : 'Sing In'}</span>
                     </div>
                 </Link>
 
