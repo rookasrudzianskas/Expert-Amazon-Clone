@@ -3,6 +3,27 @@ import "./styles/Login.css"
 import {Link} from "@material-ui/core";
 
 const Login = () => {
+
+    // functions to do login and the registering
+
+    // Login
+
+    const login = (event) => {
+        event.preventDefault(); // this stops refresing
+        // login logic there
+
+
+    }
+
+    // REgister
+
+    const register = (event) => {
+        event.preventDefault(); // this stops refreshing
+        // registering logic there
+    }
+
+
+
     return (
         <div className="login">
 
@@ -24,7 +45,7 @@ const Login = () => {
                     <h5>Password</h5>
                     <input type="password"/>
 
-                    <button type="submit" className="login__signInButton"s>Sign In</button>
+                    <button onClick={login} type="submit" className="login__signInButton"s>Sign In</button>
 
 
                     <p className="login__paragraph">
@@ -33,7 +54,7 @@ const Login = () => {
                         Notice.
                     </p>
 
-                    <button className="login__registerButton">Create Your Amazon Account</button>
+                    <button onClick={register} className="login__registerButton">Create Your Amazon Account</button>
                 </form>
 
             </div>
