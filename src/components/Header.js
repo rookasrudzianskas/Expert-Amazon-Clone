@@ -53,6 +53,7 @@ function Header() {
                     {/* and this login function is going to check out, if the user is logged in */}
                     {/* it is going to leg the user out*/}
                     <div onClick={login} className="header__option">
+                        {/*user?.email means, to show the email if there is a user, if not so silently do not shows it*/}
                         <span className="header__optionLineOne">Hello, {user?.email}</span>
                         <span className="header__optionLineTwo">{user ? 'Sing Out' : 'Sing In'}</span>
                     </div>
